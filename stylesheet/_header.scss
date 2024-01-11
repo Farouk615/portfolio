@@ -1,0 +1,16 @@
+header {
+  padding: 14px;
+  box-shadow: black;
+}
+header h1 {
+  color: $purple;
+}
+.navbar-list{
+  list-style-type: none;
+  margin: 0;
+}
+.navbar-list li {
+  text-decoration: none;
+  margin-left: 24px;
+  color: $white;
+}
