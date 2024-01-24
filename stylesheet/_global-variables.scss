@@ -1,4 +1,15 @@
-// colors
-$black : #000000;
+// dark mode colors
+$black: #000000;
+
+// light mode colors
+$white: #FFFFFF;
 $purple : #B336FF;
-$white : #FFFFFF;
+
+.light-mode{
+  background-color: $white;
+  color: $black;
+}
+.dark-mode {
+  background-color: $black;
+  color: $white;
+}
