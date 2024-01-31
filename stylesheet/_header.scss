@@ -1,0 +1,26 @@
+header {
+  padding: 14px;
+}
+header h1 {
+  color: $white;
+  margin: 0;
+}
+.navbar-list{
+  list-style-type: none;
+  margin: 0;
+}
+.navbar-list li {
+  text-decoration: none;
+  margin-left: 24px;
+}
+.light-mode-box-shadow{
+  box-shadow: 0px -8px 26.2px 0px #B336FF;
+}
+.top-header{
+  position: relative;
+}
+.bulb{
+  position: absolute;
+  top: 100%;
+  left: 30%;
+}

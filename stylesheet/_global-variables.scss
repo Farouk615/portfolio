@@ -1,0 +1,42 @@
+// dark mode colors
+$black: #000000;
+
+// light mode colors
+$white: #FFFFFF;
+$purple: #B336FF;
+
+.light-mode {
+  background: linear-gradient(180deg, #FFF 0%, #B9B9B9 32.81%, #858585 60.94%, #363636 100%);
+  color: $black;
+}
+
+.dark-mode {
+  background-color: rgba(0, 0, 0, 0.86);
+  color: $white;
+}
+
+.purple-color {
+  color: $purple;
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: unset;
+}
+
+.text-style {
+  font-family: "Bebas Neue", serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sidebar-button,
+.blank-div {
+  display: none;
+}
+
+.sidebar-button{
+  font-size: 30px;
+}
