@@ -1,0 +1,7 @@
+@mixin text-style($font-size,$font-family) {
+  font-family: $font-family, serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: $font-size;
+}

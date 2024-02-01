@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output_css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Welcome to Farouk Portfolio</title>
@@ -17,7 +20,7 @@
             <h1 class="text-style">WELCOME !</h1>
             <div class="blank-div"></div>
             <nav>
-                <ul class="navbar-list d-flex justify-content-evenly text-style">
+                <ul class="navbar-list d-flex justify-content-evenly">
                     <li><a href="#home" class="no-decoration">HOME</a></li>
                     <li><a href="#about" class="no-decoration">ABOUT</a></li>
                     <li><a href="#projects" class="no-decoration">PROJECTS</a></li>
@@ -29,12 +32,42 @@
     <img src="assets/images/light_bulb_dark.svg" alt="light_bulb_dark.svg" id="bulb-dark-mode" class="bulb">
     <img src="assets/images/light_bulb_light.svg" alt="light_bulb_dark.svg" class="d-none bulb" id="bulb-light-mode">
 </div>
-<main>
+<main id="home">
     <div class="container">
-        <h1 id="welcome-text"></h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-12"><img src="assets/images/farouk.jpeg" alt="farouk" id="farouk-photo"></div>
+            <div class="col-lg-6 col-md-12">
+                <div id="intro-section">
+                    <h2 id="welcome-text" dir="rtl"></h2>
+                    <h1 id="my-name">I AM <span class="purple-color">MOHAMED FAROUK AYADI</span></h1>
+                    <p>I am an enthusiastic web and mobile engineer with over 2 successful years of experience in the
+                        software and IT industries. Having worked on diverse projects, my greatest satisfaction comes
+                        from ensuring client happiness and contentment. Specializing in front-end development and
+                        DevOps, I have acquired extensive knowledge, successfully resolved numerous challenges, and
+                        remain eager to continually learn and acquire new skills. My passion lies in creating innovative
+                        solutions and contributing to the ever-evolving world of technology</p>
+                    <div id="social-section">
+                        <div id="social-links">
+                            <div id="resume">
+                                <a download="farouk_ayadi.pdf" href="assets/documents/farouk_ayadi.pdf">
+                                    <span>RESUME</span>
+                                    <img src="assets/icons/download-cloud-white.svg" alt="download-cloud-white">
+                                    <img src="assets/icons/download-cloud.svg" class="d-none" alt="download-cloud">
+                                </a>
+                            </div>
+                            <div id="links">
+                                <a href="https://www.instagram.com/mr_farouk_ayadi/"><img src="assets/icons/instagram.svg" alt="instagarm"></a>
+                                <a href="https://www.linkedin.com/in/farouk9/"><img src="assets/icons/linkedin.svg" alt="linkedin"></a>
+                                <a href="https://github.com/Farouk615"><img src="assets/icons/github.svg" alt="github"></a>
+                                <a href="mailto:mohamedfarouk.ayadi@enetcom.u-sfax.tn"><img src="assets/icons/mail.svg" alt="mail"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <script src="js/index.js"></script>
-
 </body>
 </html>

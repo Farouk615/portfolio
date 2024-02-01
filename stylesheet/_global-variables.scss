@@ -5,13 +5,17 @@ $black: #000000;
 $white: #FFFFFF;
 $purple: #B336FF;
 
+body {
+  height: 100vh;
+}
+
 .light-mode {
   background: linear-gradient(180deg, #FFF 0%, #B9B9B9 32.81%, #858585 60.94%, #363636 100%);
   color: $black;
 }
 
 .dark-mode {
-  background-color: rgba(0, 0, 0, 0.86);
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.64) 36.46%, rgba(0, 0, 0, 0.64) 36.47%, rgba(70, 70, 70, 0.00) 100%);;
   color: $white;
 }
 
@@ -37,6 +41,10 @@ $purple: #B336FF;
   display: none;
 }
 
-.sidebar-button{
+.sidebar-button {
   font-size: 30px;
+}
+
+.white-background {
+  background-color: $white;
 }

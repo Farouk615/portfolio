@@ -1,3 +1,4 @@
+@import "mixins";
 header {
   padding: 14px;
 }
@@ -8,6 +9,7 @@ header h1 {
 .navbar-list{
   list-style-type: none;
   margin: 0;
+  @include text-style(30px,"Bebas Neue")
 }
 .navbar-list li {
   text-decoration: none;
