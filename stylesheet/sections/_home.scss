@@ -1,4 +1,4 @@
-@import "mixins";
+@import "../mixins";
 
 #welcome-text {
   @include text-style(40px, "Caveat");
@@ -30,6 +30,7 @@ main {
 #social-links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #links {
@@ -38,7 +39,7 @@ main {
 }
 
 #resume{
-  box-shadow: 0px 0px 10px 0px #B336FF;
+  box-shadow: 0 0 10px 0 #B336FF;
   border-radius: 30px;
   padding: 5px;
 }

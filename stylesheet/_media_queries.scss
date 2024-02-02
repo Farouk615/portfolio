@@ -1,14 +1,24 @@
-@media screen and (min-width: 768px) and (max-width: 995px){
-  .text-style{
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  .text-style {
     font-size: 20px !important;
   }
 }
+
 @media screen and (max-width: 767px) {
-  header nav{
+  header nav {
     display: none;
   }
   .sidebar-button,
   .blank-div {
     display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #social-section {
+    width: 80% !important;
+  }
+  .bulb {
+    width: 50%;
   }
 }

@@ -3,10 +3,8 @@ let bulbLightMode = document.querySelector("#bulb-light-mode")
 let bulbDarkMode = document.querySelector("#bulb-dark-mode")
 let headerElement = document.querySelector("header h1");
 let listElements = document.querySelectorAll("header li");
-let resumeCloudLight = document.querySelector("#resume img:nth-child(2)")
-let resumeCloudDark = document.querySelector("#resume img:nth-child(3)")
+let elementsToggle = document.querySelectorAll(".element-to-toggle")
 let resumeContainer = document.getElementById('resume')
-console.log(resumeCloudLight);
 
 let welcomeText = "\"Hello there !\"";
 
@@ -18,10 +16,7 @@ function toggleTheme(){
     document.body.classList.toggle("dark-mode")
     document.body.classList.toggle("light-mode")
     topHeader.classList.toggle("light-mode-box-shadow")
-    bulbDarkMode.classList.toggle("d-none")
-    bulbLightMode.classList.toggle("d-none")
-    resumeCloudLight.classList.toggle("d-none")
-    resumeCloudDark.classList.toggle("d-none")
+    elementsToggle.forEach((element)=>element.classList.toggle("d-none"))
     resumeContainer.classList.toggle("white-background")
     headerElement.classList.toggle("purple-color")
     listElements.forEach((element)=>element.classList.toggle("purple-color"))

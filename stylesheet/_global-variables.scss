@@ -5,17 +5,13 @@ $black: #000000;
 $white: #FFFFFF;
 $purple: #B336FF;
 
-body {
-  height: 100vh;
-}
-
 .light-mode {
   background: linear-gradient(180deg, #FFF 0%, #B9B9B9 32.81%, #858585 60.94%, #363636 100%);
   color: $black;
 }
 
 .dark-mode {
-  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.64) 36.46%, rgba(0, 0, 0, 0.64) 36.47%, rgba(70, 70, 70, 0.00) 100%);;
+  background-color: rgba(0, 0, 0, 0.87);
   color: $white;
 }
 
@@ -48,3 +44,19 @@ body {
 .white-background {
   background-color: $white;
 }
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-down-box {
+  margin-top: 100px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.arrow-down-box:hover {
+  transform: scaleY(1.2);
+}
+

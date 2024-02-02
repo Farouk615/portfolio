@@ -29,11 +29,13 @@
             </nav>
         </header>
     </div>
-    <img src="assets/images/light_bulb_dark.svg" alt="light_bulb_dark.svg" id="bulb-dark-mode" class="bulb">
-    <img src="assets/images/light_bulb_light.svg" alt="light_bulb_dark.svg" class="d-none bulb" id="bulb-light-mode">
+    <img src="assets/images/light_bulb_dark.svg" alt="light_bulb_dark.svg" id="bulb-dark-mode"
+         class="bulb element-to-toggle">
+    <img src="assets/images/light_bulb_light.svg" alt="light_bulb_dark.svg" class="d-none bulb element-to-toggle"
+         id="bulb-light-mode">
 </div>
-<main id="home">
-    <div class="container">
+<main>
+    <div id="home" class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12"><img src="assets/images/farouk.jpeg" alt="farouk" id="farouk-photo"></div>
             <div class="col-lg-6 col-md-12">
@@ -51,15 +53,20 @@
                             <div id="resume">
                                 <a download="farouk_ayadi.pdf" href="assets/documents/farouk_ayadi.pdf">
                                     <span>RESUME</span>
-                                    <img src="assets/icons/download-cloud-white.svg" alt="download-cloud-white">
-                                    <img src="assets/icons/download-cloud.svg" class="d-none" alt="download-cloud">
+                                    <img src="assets/icons/download-cloud-white.svg" alt="download-cloud-white"
+                                         class="element-to-toggle">
+                                    <img src="assets/icons/download-cloud.svg" class="d-none element-to-toggle"
+                                         alt="download-cloud">
                                 </a>
                             </div>
                             <div id="links">
-                                <a href="https://www.instagram.com/mr_farouk_ayadi/"><img src="assets/icons/instagram.svg" alt="instagarm"></a>
-                                <a href="https://www.linkedin.com/in/farouk9/"><img src="assets/icons/linkedin.svg" alt="linkedin"></a>
+                                <a href="https://www.instagram.com/mr_farouk_ayadi/"><img
+                                        src="assets/icons/instagram.svg" alt="instagarm"></a>
+                                <a href="https://www.linkedin.com/in/farouk9/"><img src="assets/icons/linkedin.svg"
+                                                                                    alt="linkedin"></a>
                                 <a href="https://github.com/Farouk615"><img src="assets/icons/github.svg" alt="github"></a>
-                                <a href="mailto:mohamedfarouk.ayadi@enetcom.u-sfax.tn"><img src="assets/icons/mail.svg" alt="mail"></a>
+                                <a href="mailto:mohamedfarouk.ayadi@enetcom.u-sfax.tn"><img src="assets/icons/mail.svg"
+                                                                                            alt="mail"></a>
                             </div>
                         </div>
                     </div>
@@ -67,6 +74,53 @@
             </div>
         </div>
     </div>
+    <div class="arrow-down-box center-box">
+        <a href="#about">
+            <img src="assets/icons/arrow-down-white.svg" alt="arrow down" class="element-to-toggle">
+            <img src="assets/icons/arrow-down-black.svg" alt="arrow down" class="d-none element-to-toggle">
+        </a>
+    </div>
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">test1</div>
+                <div class="col-lg-4">
+                    <div id="photo-section">
+                        <img src="assets/images/farouk.jpeg" alt="farouk">
+                        <img src="assets/text/me-black.svg" alt="me" class="element-to-toggle d-none">
+                        <img src="assets/text/me-white.svg" alt="me" class="element-to-toggle">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div id="qualifications">
+                        <img src="assets/text/qualification-component-black.svg" alt="qualification"
+                             class="element-to-toggle d-none">
+                        <img src="assets/text/qualification-component-white.svg" alt="qualification"
+                             class="element-to-toggle">
+                        <div id="degrees">
+                            <div class="degree">
+                                <h2>Master of Computer science</h2>
+                                <h3>Enetcom Tunisia,sfax</h3>
+                                <p>2019 - 2022</p>
+                            </div>
+                            <div class="degree">
+                                <h2>Bachelor of Computer science</h2>
+                                <h3>IPEIS Tunisia,sfax</h3>
+                                <p>2017 - 2019</p>
+                            </div>
+                            <div class="degree">
+                                <h2>Higher school certificates</h2>
+                                <h3>Med Ali high school</h3>
+                                <p>2013 - 2017</p>
+                            </div>
+                            <img src="assets/text/hobby-black.svg" alt="hobby" class="mt-4 d-none element-to-toggle">
+                            <img src="assets/text/hobby-white.svg" alt="hobby" class="mt-4 element-to-toggle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <script src="js/index.js"></script>
 </body>
