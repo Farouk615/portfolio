@@ -29,7 +29,6 @@
     margin-bottom: 0;
   }
 
-
   p {
     @include text-style(15px, "Bebas Neue");
     margin-bottom: 0;
@@ -41,14 +40,58 @@
   margin: auto;
 }
 
-#photo-section img:first-child {
-  width: 100%;
-  filter: blur(2px);
-  border-radius: 80px;
-  transition: filter 1s ease-in-out, border-radius 1s ease-in-out;
+#photo-section {
+  img:first-child {
+    width: 100%;
+    filter: blur(2px);
+    border-radius: 80px;
+    transition: filter 1s ease-in-out, border-radius 1s ease-in-out;
+  }
+
+  img:first-child:hover {
+    filter: none;
+    border-radius: 0;
+  }
 }
 
-#photo-section img:first-child:hover {
-  filter: none;
-  border-radius: 0;
+.bubble-holder {
+  position: relative;
+}
+
+.skills-bubble {
+  transition: transform 1s ease-in-out;
+}
+
+.skills-bubble:hover {
+  transform: scale(0.5);
+}
+
+
+
+.bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $white;
+  position: absolute;
+  /* hide the bubbles by default */
+  display: none;
+  transition: display 1s ease-in-out,margin 1s ease-in-out;
+  color: $black
+}
+
+.skills-bubble:hover ~ .bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble1 {
+  top: 100%;
+  right: 100%;
+}
+
+.bubble2 {
+  bottom: 100%;
+  right: 100%;
 }

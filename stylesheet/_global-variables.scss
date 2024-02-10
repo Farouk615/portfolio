@@ -8,11 +8,13 @@ $purple: #B336FF;
 .light-mode {
   background: linear-gradient(180deg, #FFF 0%, #B9B9B9 32.81%, #858585 60.94%, #363636 100%);
   color: $black;
+  transition: background 1s, color 1s;
 }
 
 .dark-mode {
   background-color: rgba(0, 0, 0, 0.87);
   color: $white;
+  transition: background 1s, color 1s;
 }
 
 .purple-color {
