@@ -60,17 +60,19 @@
 }
 
 .bubble-holder .skills-bubble{
+  border-radius: 50%;
   transition: transform 0.5s ease-in-out;
 }
 
 .bubble-holder:hover .skills-bubble{
   transform: scale(0.5);
+  box-shadow: 0 0 41.2px 12px #B336FF;
 }
 
 
 .bubble {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: $white;
   position: absolute;
@@ -79,6 +81,8 @@
   transition: opacity 0.3s ease;
   word-break: break-word;
   text-align: center;
+  font-size: 10px;
+  font-weight: 800;
 }
 
 .bubble-holder:hover {
@@ -109,11 +113,21 @@
   .bubble-7{
     animation: explode7 0.5s ease forwards;
   }
+  .bubble-8{
+    animation: explode8 0.5s ease forwards;
+  }
+  .bubble-9{
+    animation: explode9 0.5s ease forwards;
+  }
+  .bubble-10{
+    animation: explode10 0.5s ease forwards;
+  }
 }
 
 @keyframes explode1 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
     transform: translate(-70%,-80%);
@@ -123,6 +137,7 @@
 @keyframes explode2 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
     transform: translate(80%,-100%);
@@ -131,6 +146,7 @@
 @keyframes explode3 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
     transform: translate(300%,300%);
@@ -139,6 +155,7 @@
 @keyframes explode4 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
     transform: translate(0,300%);
@@ -147,24 +164,54 @@
 @keyframes explode5 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
-    transform: translate(300%,0);
+    transform: translate(300%,-90%);
   }
 }
 @keyframes explode6 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
-    transform: translate(200%,0);
+    transform: translate(-70%,175%);
   }
 }
 @keyframes explode7 {
   0% {
     transform: translate(0, 0);
+    display: none;
   }
   100% {
-    transform: translate(300%,100%);
+    transform: translate(342%,15%);
+  }
+}
+@keyframes explode8 {
+  0% {
+    transform: translate(0, 0);
+    display: none;
+  }
+  100% {
+    transform: translate(-50%,50%);
+  }
+}
+@keyframes explode9 {
+  0% {
+    transform: translate(0, 0);
+    display: none;
+  }
+  100% {
+    transform: translate(130%,360%);
+  }
+}
+@keyframes explode10 {
+  0% {
+    transform: translate(0, 0);
+    display: none;
+  }
+  100% {
+    transform: translate(360%,170%);
   }
 }
