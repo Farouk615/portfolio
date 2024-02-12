@@ -5,6 +5,7 @@ let headerElement = document.querySelector("header h1");
 let listElements = document.querySelectorAll("header li");
 let elementsToggle = document.querySelectorAll(".element-to-toggle")
 let resumeContainer = document.getElementById('resume')
+let cars = document.querySelectorAll('.car')
 
 let welcomeText = "\"Hello there !\"";
 
@@ -23,7 +24,6 @@ function toggleTheme(){
 }
 
 function showText(target, message,index, interval) {
-    console.log(index)
     if (index < message.length) {
         // Append the next letter to the element
         document.getElementById(target).innerHTML += message[index++];
@@ -51,3 +51,13 @@ function hideText(target, message,index, interval) {
     }
 }
 showText("welcome-text", welcomeText,0, 100);
+
+cars.forEach((element)=>{
+    element.addEventListener("click",carClick)
+})
+
+function carClick(){
+    cars.forEach((element)=>{
+        element.style.right
+    })
+}
