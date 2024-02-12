@@ -9,18 +9,20 @@
 }
 .car-holder{
   position: absolute;
-  right: -2%;
   bottom: 100%;
+  transition: right 0.5s ease-in-out;
 }
 .right-arrow-local{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 66%;
+  right: -12%;
+  cursor: pointer;
 }
 .left-arrow-local{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 66%;
+  left: 38%;
+  cursor: pointer;
 }
 .flag{
   position: absolute;

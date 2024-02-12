@@ -5,7 +5,10 @@ let headerElement = document.querySelector("header h1");
 let listElements = document.querySelectorAll("header li");
 let elementsToggle = document.querySelectorAll(".element-to-toggle")
 let resumeContainer = document.getElementById('resume')
-let cars = document.querySelectorAll('.car')
+let leftArrows = document.querySelectorAll('.left-arrow-local')
+let rightArrows = document.querySelectorAll('.right-arrow-local')
+let carHolder = document.querySelector('.car-holder')
+
 
 let welcomeText = "\"Hello there !\"";
 
@@ -52,12 +55,22 @@ function hideText(target, message,index, interval) {
 }
 showText("welcome-text", welcomeText,0, 100);
 
-cars.forEach((element)=>{
-    element.addEventListener("click",carClick)
+leftArrows.forEach((element)=>{
+    element.addEventListener("click",carClickLeft)
+})
+rightArrows.forEach((element)=>{
+    element.addEventListener("click",carClickRight)
 })
 
-function carClick(){
-    cars.forEach((element)=>{
-        element.style.right
-    })
+function carClickLeft(){
+    let currentPos = carHolder.style.right || 0;
+    if(parseInt(currentPos, 10)<90)
+    carHolder.style.right=`${parseInt(currentPos, 10) + 30}%`;
+}
+
+function carClickRight(){
+    const currentPos = carHolder.style.right || 0;
+    if(parseInt(currentPos, 10)>2){
+        carHolder.style.right=`${parseInt(currentPos, 10) - 30}%`;
+    }
 }
