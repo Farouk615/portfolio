@@ -1,31 +1,74 @@
 #experience {
   margin-top: 100px;
 }
-#experience-race{
-    width: 100%;
-    height: 1px;
-    background-color: $white;
-    position: relative;
+
+#experience-race {
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+  position: relative;
 }
-.car-holder{
+
+.car-holder {
   position: absolute;
   bottom: 100%;
   transition: right 0.5s ease-in-out;
 }
-.right-arrow-local{
+
+.right-arrow-local {
   position: absolute;
   top: 66%;
   right: -12%;
   cursor: pointer;
 }
-.left-arrow-local{
+
+.left-arrow-local {
   position: absolute;
   top: 66%;
   left: 38%;
   cursor: pointer;
 }
-.flag{
+
+.flag {
   position: absolute;
   left: 0;
   bottom: 100%;
+  transition: margin-bottom 1s ease-in-out;
+}
+
+.margin-bottom{
+  margin-bottom: 30px;
+}
+
+#experience-box {
+  position: relative;
+  margin-top: 20px;
+  height: 700px;
+  .experience {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    gap: 30px;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    justify-content: center;
+    transition: transform 1s ease , opacity 1s ease;
+    transform:translate(-50%,0%) scale(0);
+    transform-origin: right top;
+  }
+  img {
+    width: 70%;
+  }
+  p{
+    font-family: "Bradley Hand", serif;
+  }
+}
+
+.explode-animation{
+  transform: translate(-50%, 0%) scale(1) !important;
+  opacity: 1 !important;
+  z-index: 1 !important;
 }

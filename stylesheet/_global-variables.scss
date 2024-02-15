@@ -17,6 +17,11 @@ $purple: #B336FF;
   transition: background 1s, color 1s;
 }
 
+@font-face {
+  font-family: "Bradley Hand";
+  src: url('assets/fonts/bradley-hand-itc/BRADHITC.TTF');
+}
+
 .purple-color {
   color: $purple;
 }

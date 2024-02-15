@@ -12,6 +12,11 @@
   .blank-div {
     display: block;
   }
+  #photo-section{
+    img:first-child{
+      width: 70% !important;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -20,5 +25,13 @@
   }
   .bulb {
     width: 50%;
+  }
+}
+@media screen and (max-width: 991px){
+  .experience {
+    flex-wrap: wrap;
+  }
+  #experience-box img{
+    width: 100% !important;
   }
 }
