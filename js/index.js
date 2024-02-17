@@ -11,6 +11,15 @@ let carHolder = document.querySelector('.car-holder')
 let experiences = document.querySelectorAll('.experience')
 let flags = document.querySelectorAll('.flag')
 let emailForm = document.querySelector('.email-form ')
+let submitButtons = document.querySelectorAll('.submit-button')
+let certifLeftArrows = document.querySelectorAll('.arrow-left')
+let certifRightArrows = document.querySelectorAll('.arrow-right')
+let certificates = document.querySelectorAll('.certif')
+let certificatesIndex = 0;
+
+
+const mediaQuery = window.matchMedia('(max-width: 991px)');
+
 experiences[0].classList.add('explode-animation')
 
 let welcomeText = "\"Hello there !\"";
@@ -75,10 +84,10 @@ function carClickLeft() {
     let currentPos = carHolder.style.right || 0;
     if (parseInt(currentPos, 10) < 90)
         carHolder.style.right = `${parseInt(currentPos, 10) + 32}%`;
-    if(experienceCounter===3)
-        flags.forEach((element)=>element.classList.add('margin-bottom'))
-    else{
-        flags.forEach((element)=>element.classList.remove('margin-bottom'))
+    if (experienceCounter === 3)
+        flags.forEach((element) => element.classList.add('margin-bottom'))
+    else {
+        flags.forEach((element) => element.classList.remove('margin-bottom'))
     }
     experiences[experienceCounter].classList.add('explode-animation')
 }
@@ -90,11 +99,44 @@ function carClickRight() {
     if (parseInt(currentPos, 10) > 2) {
         carHolder.style.right = `${parseInt(currentPos, 10) - 32}%`;
     }
-    if(experienceCounter===3)
-        flags.forEach((element)=>element.classList.add('margin-bottom'))
-    else{
-        flags.forEach((element)=>element.classList.remove('margin-bottom'))
+    if (experienceCounter === 3)
+        flags.forEach((element) => element.classList.add('margin-bottom'))
+    else {
+        flags.forEach((element) => element.classList.remove('margin-bottom'))
     }
     experiences[experienceCounter].classList.add('explode-animation')
 }
 
+mediaQuery.addEventListener('change', function (e) {
+    // If the media query is true
+    if (e.matches) {
+        // Then do something
+        console.log('Media query matched!');
+        submitButtons.forEach((element) => element.classList.toggle(`d-none`))
+    } else {
+        // Else do something else
+        console.log('Media query not matched!');
+        submitButtons.forEach((element) => element.classList.toggle(`d-none`))
+    }
+});
+
+certifLeftArrows.forEach((element) => element.addEventListener('click', () => {
+    certificates[certificatesIndex].classList.remove('active-certificate');
+    certificatesIndex--;
+    if (certificatesIndex == -1) {
+        certificatesIndex = 7;
+    }
+    certificates[certificatesIndex].classList.add('active-certificate');
+    console.log(certificatesIndex)
+
+}))
+certifRightArrows.forEach((element) => element.addEventListener('click', () => {
+    certificates[certificatesIndex].classList.remove('active-certificate');
+    certificatesIndex++;
+    if (certificatesIndex == 8) {
+        certificatesIndex = 0;
+    }
+    certificates[certificatesIndex].classList.add('active-certificate');
+    console.log(certificatesIndex)
+
+}))

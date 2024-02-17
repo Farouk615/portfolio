@@ -12,8 +12,8 @@
   .blank-div {
     display: block;
   }
-  #photo-section{
-    img:first-child{
+  #photo-section {
+    img:first-child {
       width: 70% !important;
     }
   }
@@ -27,11 +27,38 @@
     width: 50%;
   }
 }
-@media screen and (max-width: 991px){
+
+@media screen and (max-width: 991px) {
   .experience {
     flex-wrap: wrap;
   }
-  #experience-box img{
+  #experience-box img {
     width: 100% !important;
+  }
+  .form-group {
+    input {
+      width: 100% !important;
+    }
+  }
+  .top-corner{
+    top: -6% !important;
+    left: -14% !important;
+    width: 25% !important;
+  }
+  .bottom-corner{
+    bottom: -6% !important;
+    right: -14% !important;
+    width: 25% !important;
+  }
+}
+@media screen and (max-width: 500px){
+  .email-form{
+    padding: 1rem !important;
+  }
+  .arrow-left{
+    left: 10% !important;
+  }
+  .arrow-right{
+    right: 10% !important;
   }
 }
