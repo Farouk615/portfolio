@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="output_css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Welcome to Farouk Portfolio</title>
+    <script type="module" src="dist/bundle.js" defer></script>
 </head>
 <body class="dark-mode">
 <div class="top-header">
@@ -223,7 +224,7 @@
     </div>
     <section id="contact-me">
         <div class="container">
-            <form class="row email-form" action="#">
+            <form class="row email-form" action="#" id="email-form">
                 <img src="assets/icons/corner-top-black.svg" alt="corner-top-black"
                      class="element-to-toggle d-none top-corner">
                 <img src="assets/icons/corner-top-white.svg" alt="corner-top-white"
@@ -236,10 +237,6 @@
                     <div class="form-group">
                         <label for="first-name">First Name</label>
                         <input type="text" name="first-name" id="first-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
                     </div>
                     <button type="submit" class="submit-button">Send</button>
                 </div>
@@ -259,6 +256,5 @@
         </div>
     </section>
 </main>
-<script src="js/index.js"></script>
 </body>
 </html>

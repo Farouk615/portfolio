@@ -1,3 +1,5 @@
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
 let topHeader = document.querySelector(".top-header")
 let bulbLightMode = document.querySelector("#bulb-light-mode")
 let bulbDarkMode = document.querySelector("#bulb-dark-mode")
@@ -161,3 +163,5 @@ form.addEventListener('submit',async (e) => {
         console.error('Error sending email:', error);
     }
 })
+/******/ })()
+;
