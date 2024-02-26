@@ -150,7 +150,7 @@ form.addEventListener('submit', async (e) => {
     const message = document.getElementById('message').value;
 
     try {
-        await fetch('http://localhost:3000/send-email', {
+        await fetch(`${process.env.URL}/send-email`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({fname, lname, message}),
