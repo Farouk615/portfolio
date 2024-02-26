@@ -61,6 +61,32 @@
   margin-left: 20%;
 }
 
+.skills-bubble-dark-shadow {
+  box-shadow: 0 0 7px 4px #B336FF;
+}
+
+.skills-bubble-light-shadow {
+  background-color: $white;
+  box-shadow: 0 0 7px 4px $black;
+}
+
+.skills-bubble {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+
+  span {
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+
 .bubble-holder .skills-bubble {
   border-radius: 50%;
   transition: transform 0.5s ease-in-out;
@@ -68,7 +94,15 @@
 
 .bubble-holder:hover .skills-bubble {
   transform: scale(0.5);
-  box-shadow: 0 0 41.2px 12px #B336FF;
+
+  &.skills-bubble-dark-shadow {
+    box-shadow: 0 0 41.2px 12px #B336FF;
+  }
+
+  &.skills-bubble-light-shadow {
+    background-color: $white;
+    box-shadow: 0 0 41.2px 12px $black;
+  }
 }
 
 
@@ -96,10 +130,14 @@
   }
 
   .bubble-1 {
+    width: 30px;
+    height: 30px;
     animation: explode1 0.5s ease forwards;
   }
 
   .bubble-2 {
+    width: 30px;
+    height: 30px;
     animation: explode2 0.5s ease forwards;
   }
 
@@ -108,6 +146,8 @@
   }
 
   .bubble-4 {
+    width: 60px;
+    height: 60px;
     animation: explode4 0.5s ease forwards;
   }
 
@@ -128,10 +168,14 @@
   }
 
   .bubble-9 {
+    width: 30px;
+    height: 30px;
     animation: explode9 0.5s ease forwards;
   }
 
   .bubble-10 {
+    width: 50px;
+    height: 50px;
     animation: explode10 0.5s ease forwards;
   }
 }
@@ -172,7 +216,7 @@
     display: none;
   }
   100% {
-    transform: translate(0, 300%);
+    transform: translate(0, 200%);
   }
 }
 
@@ -182,7 +226,7 @@
     display: none;
   }
   100% {
-    transform: translate(300%, -90%);
+    transform: translate(230%, -90%);
   }
 }
 
@@ -212,7 +256,7 @@
     display: none;
   }
   100% {
-    transform: translate(-50%, 50%);
+    transform: translate(-130%, 50%);
   }
 }
 
@@ -222,7 +266,7 @@
     display: none;
   }
   100% {
-    transform: translate(130%, 360%);
+    transform: translate(200%, 360%);
   }
 }
 
@@ -232,7 +276,7 @@
     display: none;
   }
   100% {
-    transform: translate(360%, 170%);
+    transform: translate(220%, 120%);
   }
 }
 
@@ -249,7 +293,7 @@
   height: 100%;
   left: 50%;
   transform: translate(-50%, 0) scale(0);
-  transition: opacity 1s ease , scale 1s ease;
+  transition: opacity 1s ease, scale 1s ease;
   transform-origin: right top;
 }
 

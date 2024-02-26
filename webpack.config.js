@@ -7,7 +7,4 @@ module.exports = {
         filename: 'bundle.js', // Output bundle filename
         path: path.resolve(__dirname, 'dist') // Output directory
     },
-    optimization: {
-        minimize: false, // Disable minimization
-    },
 };

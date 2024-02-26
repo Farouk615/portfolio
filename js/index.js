@@ -19,7 +19,6 @@ let certificatesIndex = 0;
 let form = document.querySelector('#email-form')
 
 
-
 const mediaQuery = window.matchMedia('(max-width: 991px)');
 
 experiences[0].classList.add('explode-animation')
@@ -95,18 +94,18 @@ function carClickLeft() {
 }
 
 function carClickRight() {
-    experiences[experienceCounter].classList.remove('explode-animation')
-    experienceCounter--;
     const currentPos = carHolder.style.right || 0;
-    if (parseInt(currentPos, 10) > 2) {
+    if (parseInt(currentPos, 10) > 2 && experienceCounter > 0) {
+        experiences[experienceCounter].classList.remove('explode-animation')
+        experienceCounter--;
         carHolder.style.right = `${parseInt(currentPos, 10) - 32}%`;
+        if (experienceCounter === 3)
+            flags.forEach((element) => element.classList.add('margin-bottom'))
+        else {
+            flags.forEach((element) => element.classList.remove('margin-bottom'))
+        }
+        experiences[experienceCounter].classList.add('explode-animation')
     }
-    if (experienceCounter === 3)
-        flags.forEach((element) => element.classList.add('margin-bottom'))
-    else {
-        flags.forEach((element) => element.classList.remove('margin-bottom'))
-    }
-    experiences[experienceCounter].classList.add('explode-animation')
 }
 
 mediaQuery.addEventListener('change', function (e) {
@@ -143,7 +142,7 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 
 }))
 
-form.addEventListener('submit',async (e) => {
+form.addEventListener('submit', async (e) => {
     console.log("got to send")
     e.preventDefault();
     const fname = document.getElementById('first-name').value;
