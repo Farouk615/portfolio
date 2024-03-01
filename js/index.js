@@ -17,6 +17,7 @@ let certifRightArrows = document.querySelectorAll('.arrow-right')
 let certificates = document.querySelectorAll('.certif')
 let certificatesIndex = 0;
 let form = document.querySelector('#email-form')
+let loader = document.querySelector("#loader")
 
 
 const mediaQuery = window.matchMedia('(max-width: 991px)');
@@ -143,20 +144,17 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 }))
 
 form.addEventListener('submit', async (e) => {
-    console.log("got to send")
+    loader.classList.remove('hide')
     e.preventDefault();
     const fname = document.getElementById('first-name').value;
     const lname = document.getElementById('last-name').value;
     const message = document.getElementById('message').value;
-
-    try {
-        await fetch(`${process.env.URL}/send-email`, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({fname, lname, message}),
-        });
-        console.log('Email sent successfully!');
-    } catch (error) {
-        console.error('Error sending email:', error);
-    }
+    await fetch(`${process.env.URL}/send-email`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({fname, lname, message}),
+    }).then((res) => {
+    }).catch((error) => {
+    })
+    loader.classList.add('hide')
 })

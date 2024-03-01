@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set environment variables
+        run: |
+          echo "URL=https://good-lime-mite-vest.cyclic.app" >> $GITHUB_ENV
+          # Add any other environment variables you need
+
+      - name: Build and deploy
+        run: |
+          npm install
+          npm run build
+          # Deploy to GitHub Pages (adjust the command based on your project setup)
+        env:
+          URL: ${{ secrets.URL }}
+          # Add other environment variables here
