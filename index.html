@@ -266,9 +266,21 @@
             </form>
         </div>
     </section>
-    <div id="loader" class="center-box hide">
+    <div id="overlay" class="center-box hide">
         <div class="loader">
-
+        </div>
+        <div id="popup-after-send" class="hide">
+            <div id="mail-send-handler">
+                <div id="success-box" class="send-status">
+                    <img src="" alt="">
+                    <p>Email sent successfully</p>
+                </div>
+                <div id="failure-box" class="send-status hide">
+                    <img src="" alt="">
+                    <p>Failed to send email</p>
+                </div>
+                <button id="popup-ok" class="btn btn-primary">Ok</button>
+            </div>
         </div>
     </div>
 </main>

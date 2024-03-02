@@ -17,7 +17,13 @@ let certifRightArrows = document.querySelectorAll('.arrow-right')
 let certificates = document.querySelectorAll('.certif')
 let certificatesIndex = 0;
 let form = document.querySelector('#email-form')
-let loader = document.querySelector("#loader")
+let overlay = document.querySelector("#overlay")
+let loader = document.querySelector(".loader")
+let popup = document.querySelector('#popup-after-send')
+let successBox = document.querySelector('#success-box')
+let failureBox = document.querySelector('#failure-box')
+let okButton = document.querySelector('#popup-ok')
+
 
 
 const mediaQuery = window.matchMedia('(max-width: 991px)');
@@ -144,7 +150,7 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 }))
 
 form.addEventListener('submit', async (e) => {
-    loader.classList.remove('hide')
+    overlay.classList.remove('hide')
     e.preventDefault();
     const fname = document.getElementById('first-name').value;
     const lname = document.getElementById('last-name').value;
@@ -154,7 +160,22 @@ form.addEventListener('submit', async (e) => {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({fname, lname, message}),
     }).then((res) => {
+        popup.classList.remove('hide')
+        loader.classList.add('hide')
     }).catch((error) => {
+        successBox.classList.add('hide')
+        failureBox.classList.remove('hide')
+        popup.classList.remove('hide')
+        loader.classList.add('hide')
     })
-    loader.classList.add('hide')
+})
+
+okButton.addEventListener('click',()=>{
+    overlay.classList.add('hide')
+    loader.classList.remove('hide')
+    popup.classList.add('hide')
+    if(successBox.classList.contains('hide')){
+        successBox.classList.remove('hide')
+        failureBox.classList.add('hide')
+    }
 })

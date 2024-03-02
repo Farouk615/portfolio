@@ -71,12 +71,12 @@ $purple: #B336FF;
   display: none;
 }
 
-#loader {
+#overlay {
   position: fixed;
   width: 100%;
   height: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   background-color: #4d4b528a;
   z-index: 2;
 }
@@ -91,6 +91,38 @@ $purple: #B336FF;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
+#popup-after-send {
+  background-color: $white;
+  width: 30%;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 30px;
+}
+
+#failure-box {
+  p {
+    color: #FF0000FF;
+  }
+}
+
+#success-box {
+  p {
+    color: #008000FF;
+  }
+}
+
+#mail-send-handler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
