@@ -276,6 +276,11 @@ main {
 }
 
 #farouk-photo {
+  width: 100%;
+}
+
+#photo-holder {
+  position: relative;
   width: 50%;
 }
 
