@@ -134,6 +134,11 @@
   #popup-after-send {
     width: unset;
   }
+  #intro-section {
+    text-align: center;
+    margin-top: 30px;
+    align-items: center !important;
+  }
 }
 @media screen and (max-width: 500px) {
   #social-section {
