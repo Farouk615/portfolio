@@ -20,6 +20,40 @@
 </head>
 <body class="dark-mode">
 <div class="top-header">
+        <aside id="sidebar">
+            <div id="sidebar-header">
+                <div>
+                    <h1 class="text-style">WELCOME !</h1>
+                    <i class="fas fa-regular fa-xmark sidebar-button"></i>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="no-decoration">
+                        <i class="fas fa-regular fa-house"></i>
+                        <h1 class="sidebar-header">HOME</h1>
+                        <i class="fas fa-solid fa-angle-right"></i>
+                        </a></li>
+                    <li><a href="#about" class="no-decoration">
+                        <i class="fas fa-regular fa-address-card"></i>
+                        <h1 class="sidebar-header">ABOUT</h1>
+                        <i class="fas fa-solid fa-angle-right"></i>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="no-decoration">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h1 class="sidebar-header">EXPERIENCE</h1>
+                            <i class="fas fa-solid fa-angle-right"></i>
+                        </a></li>
+                    <li><a href="#contact-me" class="no-decoration">
+                        <i class="fa-regular fa-address-card"></i>
+                        <h1 class="sidebar-header">CONTACT ME</h1>
+                        <i class="fas fa-solid fa-angle-right"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
     <div class="container">
         <header class="d-flex justify-content-between align-items-center">
             <div class="sidebar-button"><i class="fa-solid fa-bars"></i></div>
@@ -29,7 +63,7 @@
                 <ul class="navbar-list d-flex justify-content-evenly">
                     <li><a href="#home" class="no-decoration">HOME</a></li>
                     <li><a href="#about" class="no-decoration">ABOUT</a></li>
-                    <li><a href="#experience" class="no-decoration">PROJECTS</a></li>
+                    <li><a href="#experience" class="no-decoration">EXPERIENCE</a></li>
                     <li><a href="#contact-me" class="no-decoration">CONTACT ME</a></li>
                 </ul>
             </nav>
@@ -53,7 +87,7 @@
                     <h2 id="welcome-text" dir="rtl"></h2>
                     <h1 id="my-name">I AM <span class="purple-color">MOHAMED FAROUK AYADI</span></h1>
                     <p>I am an enthusiastic web and mobile engineer with over 2 successful years of experience in the
-                        software and IT industries. Having worked on diverse projects with Vue , Express </p>
+                        software and IT industries. Having worked on diverse projects with Vue , Node js , Flutter and More... </p>
                     <div id="social-section">
                         <div id="social-links">
                             <div id="resume">
@@ -247,7 +281,6 @@
                         <label for="first-name">First Name</label>
                         <input type="text" name="first-name" id="first-name">
                     </div>
-                    <button type="submit" class="submit-button">Send</button>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                     <div class="form-group">
@@ -260,7 +293,7 @@
                                   placeholder="Enter your message" required></textarea>
                     </div>
                 </div>
-                <button type="submit" class="submit-button d-none">Send</button>
+                <button type="submit" class="submit-button">Send</button>
             </form>
         </div>
     </section>

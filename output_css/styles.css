@@ -144,7 +144,11 @@
   #social-section {
     width: 80% !important;
   }
+  #photo-holder {
+    margin: auto;
+  }
   .bulb {
+    left: 50% !important;
     width: 50%;
   }
 }
@@ -740,6 +744,82 @@ main {
 
 .box-shadow-light {
   box-shadow: 0 0 6px 7px rgba(0, 0, 0, 0.36);
+}
+
+#sidebar {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  z-index: 3;
+  transition: left ease-in-out 1s;
+  background-color: #1e1e2d;
+}
+#sidebar ul {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-top: 20px;
+}
+#sidebar li {
+  color: #000000;
+  margin-bottom: 10px;
+}
+#sidebar li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sidebar li a h1 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+  font-family: "Bebas Neue", serif;
+}
+#sidebar li a i {
+  color: #94c0d4;
+}
+#sidebar li a i:last-child {
+  margin-right: 12px;
+}
+#sidebar li a:active h1, #sidebar li a:active i {
+  color: red;
+}
+#sidebar #sidebar-header div {
+  width: 70%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+#sidebar #sidebar-header div .text-style {
+  margin: 0;
+}
+#sidebar #sidebar-header div i {
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-right: 12px;
+}
+
+.left-change {
+  left: 0 !important;
+}
+
+.sidebar-header-light {
+  background-color: #f5f6f9;
+}
+
+.icons-light {
+  color: #000000 !important;
+}
+
+.header-white {
+  color: #000000 !important;
+}
+
+.sidebar-background-light {
+  background-color: #FFFFFF !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

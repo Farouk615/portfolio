@@ -2,6 +2,8 @@ let topHeader = document.querySelector(".top-header")
 let bulbLightMode = document.querySelector("#bulb-light-mode")
 let bulbDarkMode = document.querySelector("#bulb-dark-mode")
 let headerElement = document.querySelector("header h1");
+let headerElementSideBar = document.querySelector("#sidebar-header h1");
+let sidebarHeaders = document.querySelectorAll('.sidebar-header')
 let listElements = document.querySelectorAll("header li");
 let elementsToggle = document.querySelectorAll(".element-to-toggle")
 let resumeContainer = document.getElementById('resume')
@@ -11,7 +13,10 @@ let carHolder = document.querySelector('.car-holder')
 let experiences = document.querySelectorAll('.experience')
 let flags = document.querySelectorAll('.flag')
 let emailForm = document.querySelector('.email-form ')
-let submitButtons = document.querySelectorAll('.submit-button')
+let sidebarButtons = document.querySelectorAll('.sidebar-button')
+let sidebar = document.querySelector('#sidebar')
+let sidebarIcon = document.querySelector('#sidebar-header i')
+let sidebarHeader = document.querySelector('#sidebar-header')
 let certifLeftArrows = document.querySelectorAll('.arrow-left')
 let certifRightArrows = document.querySelectorAll('.arrow-right')
 let certificates = document.querySelectorAll('.certif')
@@ -44,7 +49,12 @@ function toggleTheme() {
     elementsToggle.forEach((element) => element.classList.toggle("d-none"))
     resumeContainer.classList.toggle("white-background")
     headerElement.classList.toggle("purple-color")
+    headerElementSideBar.classList.toggle("purple-color")
+    sidebarHeader.classList.toggle('sidebar-header-light')
     listElements.forEach((element) => element.classList.toggle("purple-color"))
+    sidebarHeaders.forEach((element)=>element.classList.toggle('header-white'))
+    sidebar.classList.toggle('sidebar-background-light')
+    sidebarIcon.classList.toggle('icons-light')
     emailForm.classList.toggle('background-light')
     emailForm.classList.toggle('box-shadow-light')
 }
@@ -115,18 +125,6 @@ function carClickRight() {
     }
 }
 
-mediaQuery.addEventListener('change', function (e) {
-    // If the media query is true
-    if (e.matches) {
-        // Then do something
-        console.log('Media query matched!');
-        submitButtons.forEach((element) => element.classList.toggle(`d-none`))
-    } else {
-        // Else do something else
-        console.log('Media query not matched!');
-        submitButtons.forEach((element) => element.classList.toggle(`d-none`))
-    }
-});
 
 certifLeftArrows.forEach((element) => element.addEventListener('click', () => {
     certificates[certificatesIndex].classList.remove('active-certificate');
@@ -150,6 +148,7 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 }))
 
 form.addEventListener('submit', async (e) => {
+    console.log('hkgk')
     overlay.classList.remove('hide')
     e.preventDefault();
     const fname = document.getElementById('first-name').value;
@@ -179,3 +178,15 @@ okButton.addEventListener('click',()=>{
         failureBox.classList.add('hide')
     }
 })
+sidebarButtons.forEach((element)=>{
+    element.addEventListener('click',()=>{
+        sidebar.classList.toggle('left-change')
+    })
+})
+
+/*document.addEventListener('click', function(event) {
+    // Check if the click is outside the popup
+    if (!popup.contains(event.target)) {
+        closeOverlay();
+    }
+});*/
