@@ -236,6 +236,8 @@ header h1 {
   font-weight: 400;
   line-height: normal;
   font-size: 40px;
+  transition: opacity ease-in-out 2s;
+  opacity: 0;
 }
 
 main {
@@ -243,6 +245,8 @@ main {
 }
 
 #intro-section p {
+  opacity: 0;
+  transition: opacity ease-in-out 2s;
   font-family: "Bebas Neue", serif;
   font-style: normal;
   font-weight: 400;
@@ -297,6 +301,10 @@ main {
 #photo-holder {
   position: relative;
   width: 50%;
+}
+
+.text-active {
+  opacity: 1 !important;
 }
 
 #about {
@@ -399,13 +407,16 @@ main {
   transition: transform 0.5s ease-in-out;
 }
 
-.bubble-holder:hover .skills-bubble {
+.bubble-holder:hover .skills-bubble,
+.hovered .skills-bubble {
   transform: scale(0.5);
 }
-.bubble-holder:hover .skills-bubble.skills-bubble-dark-shadow {
+.bubble-holder:hover .skills-bubble.skills-bubble-dark-shadow,
+.hovered .skills-bubble.skills-bubble-dark-shadow {
   box-shadow: 0 0 41.2px 12px #B336FF;
 }
-.bubble-holder:hover .skills-bubble.skills-bubble-light-shadow {
+.bubble-holder:hover .skills-bubble.skills-bubble-light-shadow,
+.hovered .skills-bubble.skills-bubble-light-shadow {
   background-color: #FFFFFF;
   box-shadow: 0 0 41.2px 12px #000000;
 }
@@ -425,48 +436,59 @@ main {
   font-weight: 800;
 }
 
-.bubble-holder:hover .bubble {
+.bubble-holder:hover .bubble,
+.hovered .bubble {
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
 }
-.bubble-holder:hover .bubble-1 {
+.bubble-holder:hover .bubble-1,
+.hovered .bubble-1 {
   width: 30px;
   height: 30px;
   animation: explode1 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-2 {
+.bubble-holder:hover .bubble-2,
+.hovered .bubble-2 {
   width: 30px;
   height: 30px;
   animation: explode2 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-3 {
+.bubble-holder:hover .bubble-3,
+.hovered .bubble-3 {
   animation: explode3 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-4 {
+.bubble-holder:hover .bubble-4,
+.hovered .bubble-4 {
   animation: explode4 0.5s ease forwards;
   width: 30px;
   height: 30px;
 }
-.bubble-holder:hover .bubble-5 {
+.bubble-holder:hover .bubble-5,
+.hovered .bubble-5 {
   animation: explode5 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-6 {
+.bubble-holder:hover .bubble-6,
+.hovered .bubble-6 {
   animation: explode6 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-7 {
+.bubble-holder:hover .bubble-7,
+.hovered .bubble-7 {
   animation: explode7 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-8 {
+.bubble-holder:hover .bubble-8,
+.hovered .bubble-8 {
   animation: explode8 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-9 {
+.bubble-holder:hover .bubble-9,
+.hovered .bubble-9 {
   width: 30px;
   height: 30px;
   animation: explode9 0.5s ease forwards;
 }
-.bubble-holder:hover .bubble-10 {
+.bubble-holder:hover .bubble-10,
+.hovered .bubble-10 {
   width: 50px;
   height: 50px;
   animation: explode10 0.5s ease forwards;
@@ -783,7 +805,7 @@ main {
   margin-right: 12px;
 }
 #sidebar li a:active h1, #sidebar li a:active i {
-  color: red;
+  color: red !important;
 }
 #sidebar #sidebar-header div {
   width: 70%;

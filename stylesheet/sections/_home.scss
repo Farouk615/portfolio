@@ -6,6 +6,8 @@
 
 #my-name {
   @include text-style(40px, "Bebas Neue");
+  transition: opacity ease-in-out 2s;
+  opacity: 0;
 }
 
 main {
@@ -13,6 +15,8 @@ main {
 }
 
 #intro-section p {
+  opacity: 0;
+  transition: opacity ease-in-out 2s;
   @include text-style(20px, "Bebas Neue");
 }
 
@@ -59,4 +63,8 @@ main {
 #photo-holder {
   position: relative;
   width: 50%;
+}
+
+.text-active{
+  opacity: 1 !important;
 }

@@ -28,6 +28,38 @@ let popup = document.querySelector('#popup-after-send')
 let successBox = document.querySelector('#success-box')
 let failureBox = document.querySelector('#failure-box')
 let okButton = document.querySelector('#popup-ok')
+let bubbleHolder = document.querySelector('.bubble-holder')
+let myName = document.querySelector('#my-name')
+let introParagraph = document.querySelector('#intro-section p')
+
+
+window.addEventListener('scroll', handleScroll);
+
+function handleScroll() {
+    // Get the bounding rectangle of the element
+    const rectBubbleHolder = bubbleHolder.getBoundingClientRect();
+    const rectMyName = myName.getBoundingClientRect();
+
+
+    // Check if the element is in the viewport
+    if (rectBubbleHolder.top < window.innerHeight && rectBubbleHolder.bottom > 0) {
+        // Element is visible, add a class for styling (e.g., 'hovered')
+        bubbleHolder.classList.add('hovered');
+    } else {
+        // Element is not visible, remove the class
+        bubbleHolder.classList.remove('hovered');
+    }
+    if (rectMyName.top < window.innerHeight && rectMyName.bottom > 0) {
+        console.log('visible')
+        // Element is visible, add a class for styling (e.g., 'hovered')
+        myName.classList.add('text-active');
+        introParagraph.classList.add('text-active');
+    } else {
+        // Element is not visible, remove the class
+        myName.classList.remove('text-active');
+        introParagraph.classList.add('text-active');
+    }
+}
 
 
 
@@ -183,10 +215,3 @@ sidebarButtons.forEach((element)=>{
         sidebar.classList.toggle('left-change')
     })
 })
-
-/*document.addEventListener('click', function(event) {
-    // Check if the click is outside the popup
-    if (!popup.contains(event.target)) {
-        closeOverlay();
-    }
-});*/

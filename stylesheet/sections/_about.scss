@@ -93,7 +93,8 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.bubble-holder:hover .skills-bubble {
+.bubble-holder:hover .skills-bubble ,
+.hovered .skills-bubble{
   transform: scale(0.5);
 
   &.skills-bubble-dark-shadow {
@@ -122,7 +123,8 @@
   font-weight: 800;
 }
 
-.bubble-holder:hover {
+.bubble-holder:hover ,
+.hovered{
   .bubble {
     display: flex;
     justify-content: center;
@@ -319,5 +321,6 @@
   transform: translate(-50%, 0) scale(1);
   z-index: 1;
 }
+
 
 
