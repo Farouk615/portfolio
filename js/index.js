@@ -29,8 +29,12 @@ let successBox = document.querySelector('#success-box')
 let failureBox = document.querySelector('#failure-box')
 let okButton = document.querySelector('#popup-ok')
 let bubbleHolder = document.querySelector('.bubble-holder')
+let bubble = document.querySelectorAll('.bubble-holder .bubble')
 let myName = document.querySelector('#my-name')
 let introParagraph = document.querySelector('#intro-section p')
+let faroukPhoto = document.querySelector('#photo-section img:first-child')
+
+let nameReached = false,photoReached=false,skillsReached=false;
 
 
 window.addEventListener('scroll', handleScroll);
@@ -39,13 +43,14 @@ function handleScroll() {
     // Get the bounding rectangle of the element
     const rectBubbleHolder = bubbleHolder.getBoundingClientRect();
     const rectMyName = myName.getBoundingClientRect();
+    const rectPhoto = faroukPhoto.getBoundingClientRect();
+
 
 
     // Check if the element is in the viewport
     if (rectBubbleHolder.top < window.innerHeight && rectBubbleHolder.bottom > 0) {
-        // Element is visible, add a class for styling (e.g., 'hovered')
         bubbleHolder.classList.add('hovered');
-    } else {
+    } else{
         // Element is not visible, remove the class
         bubbleHolder.classList.remove('hovered');
     }
@@ -58,6 +63,13 @@ function handleScroll() {
         // Element is not visible, remove the class
         myName.classList.remove('text-active');
         introParagraph.classList.add('text-active');
+    }
+    if (rectPhoto.top < window.innerHeight && rectPhoto.bottom > 0) {
+        // Element is visible, add a class for styling (e.g., 'hovered')
+        faroukPhoto.classList.add('photo-active');
+    } else {
+        // Element is not visible, remove the class
+        faroukPhoto.classList.remove('photo-active');
     }
 }
 
@@ -83,6 +95,7 @@ function toggleTheme() {
     headerElement.classList.toggle("purple-color")
     headerElementSideBar.classList.toggle("purple-color")
     sidebarHeader.classList.toggle('sidebar-header-light')
+    bubble.forEach((element)=>element.classList.toggle('bubble-light'))
     listElements.forEach((element) => element.classList.toggle("purple-color"))
     sidebarHeaders.forEach((element)=>element.classList.toggle('header-white'))
     sidebar.classList.toggle('sidebar-background-light')

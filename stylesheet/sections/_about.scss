@@ -42,16 +42,18 @@
 
 #photo-section {
   flex-direction: column;
+
   img:first-child {
     width: 100%;
     filter: blur(2px);
     border-radius: 80px;
-    transition: filter 1s ease-in-out, border-radius 1s ease-in-out;
+    transition: filter 2s ease-in-out, border-radius 2s ease-in-out;
   }
 
-  img:first-child:hover {
-    filter: none;
-    border-radius: 0;
+  img:first-child:hover,
+  .photo-active {
+    filter: none !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -93,8 +95,8 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.bubble-holder:hover .skills-bubble ,
-.hovered .skills-bubble{
+.bubble-holder:hover .skills-bubble,
+.hovered .skills-bubble {
   transform: scale(0.5);
 
   &.skills-bubble-dark-shadow {
@@ -112,9 +114,10 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: $white;
+  background-color: $black;
   position: absolute;
-  color: $black;
+  color: $white;
+  box-shadow: 0 0 14px 0 #B336FF;
   opacity: 0;
   transition: opacity 0.3s ease;
   word-break: break-word;
@@ -123,8 +126,14 @@
   font-weight: 800;
 }
 
-.bubble-holder:hover ,
-.hovered{
+.bubble-light {
+  background-color: $white;
+  color: $black;
+  box-shadow: 0 0 14px 4px $black;
+}
+
+.bubble-holder:hover,
+.hovered {
   .bubble {
     display: flex;
     justify-content: center;
@@ -321,6 +330,7 @@
   transform: translate(-50%, 0) scale(1);
   z-index: 1;
 }
+
 
 
 

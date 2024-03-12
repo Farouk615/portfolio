@@ -363,11 +363,12 @@ main {
   width: 100%;
   filter: blur(2px);
   border-radius: 80px;
-  transition: filter 1s ease-in-out, border-radius 1s ease-in-out;
+  transition: filter 2s ease-in-out, border-radius 2s ease-in-out;
 }
-#photo-section img:first-child:hover {
-  filter: none;
-  border-radius: 0;
+#photo-section img:first-child:hover,
+#photo-section .photo-active {
+  filter: none !important;
+  border-radius: 0 !important;
 }
 
 .bubble-holder {
@@ -425,15 +426,22 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #000000;
   position: absolute;
-  color: #000000;
+  color: #FFFFFF;
+  box-shadow: 0 0 14px 0 #B336FF;
   opacity: 0;
   transition: opacity 0.3s ease;
   word-break: break-word;
   text-align: center;
   font-size: 10px;
   font-weight: 800;
+}
+
+.bubble-light {
+  background-color: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 0 14px 4px #000000;
 }
 
 .bubble-holder:hover .bubble,
