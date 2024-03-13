@@ -146,7 +146,7 @@ function carClickLeft() {
     experienceCounter++;
     let currentPos = carHolder.style.right || 0;
     if (parseInt(currentPos, 10) < 90)
-        carHolder.style.right = `${parseInt(currentPos, 10) + 32}%`;
+        carHolder.style.right = `${parseInt(currentPos, 10) + 30}%`;
     if (experienceCounter === 3)
         flags.forEach((element) => element.classList.add('margin-bottom'))
     else {
@@ -160,7 +160,7 @@ function carClickRight() {
     if (parseInt(currentPos, 10) > 2 && experienceCounter > 0) {
         experiences[experienceCounter].classList.remove('explode-animation')
         experienceCounter--;
-        carHolder.style.right = `${parseInt(currentPos, 10) - 32}%`;
+        carHolder.style.right = `${parseInt(currentPos, 10) - 30}%`;
         if (experienceCounter === 3)
             flags.forEach((element) => element.classList.add('margin-bottom'))
         else {
