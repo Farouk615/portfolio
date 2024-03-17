@@ -38,34 +38,24 @@ let faroukPhoto = document.querySelector('#photo-section img:first-child')
 window.addEventListener('scroll', handleScroll);
 
 function handleScroll() {
-    // Get the bounding rectangle of the element
     const rectBubbleHolder = bubbleHolder.getBoundingClientRect();
     const rectMyName = myName.getBoundingClientRect();
     const rectPhoto = faroukPhoto.getBoundingClientRect();
-
-
-
-    // Check if the element is in the viewport
     if (rectBubbleHolder.top < window.innerHeight && rectBubbleHolder.bottom > 0) {
         bubbleHolder.classList.add('hovered');
     } else{
-        // Element is not visible, remove the class
         bubbleHolder.classList.remove('hovered');
     }
     if (rectMyName.top < window.innerHeight && rectMyName.bottom > 0) {
-        // Element is visible, add a class for styling (e.g., 'hovered')
         myName.classList.add('text-active');
         introParagraph.classList.add('text-active');
     } else {
-        // Element is not visible, remove the class
         myName.classList.remove('text-active');
         introParagraph.classList.add('text-active');
     }
     if (rectPhoto.top < window.innerHeight && rectPhoto.bottom > 0) {
-        // Element is visible, add a class for styling (e.g., 'hovered')
         faroukPhoto.classList.add('photo-active');
     } else {
-        // Element is not visible, remove the class
         faroukPhoto.classList.remove('photo-active');
     }
 }
@@ -98,25 +88,20 @@ function toggleTheme() {
 }
 
 function showText(target, message, index, interval) {
+    let title = document.getElementById(target);
     if (index < message.length) {
-        // Append the next letter to the element
-        document.getElementById(target).innerHTML += message[index++];
-        // Call the function again after a delay
+        title.innerHTML += message[index++];
         setTimeout(function () {
             showText(target, message, index, interval);
         }, interval);
     } else {
-        // When the message is complete, call another function to remove it
         hideText(target, message, message.length - 1, interval);
     }
 }
 
-// A function that removes one letter at a time from a text element
 function hideText(target, message, index, interval) {
     if (index > 0) {
-        // Remove the last letter from the element
         document.getElementById(target).innerHTML = message.substring(0, index--);
-        // Call the function again after a delay
         setTimeout(function () {
             hideText(target, message, index, interval);
         }, interval);
