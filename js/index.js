@@ -34,9 +34,6 @@ let myName = document.querySelector('#my-name')
 let introParagraph = document.querySelector('#intro-section p')
 let faroukPhoto = document.querySelector('#photo-section img:first-child')
 
-let nameReached = false,photoReached=false,skillsReached=false;
-
-
 window.addEventListener('scroll', handleScroll);
 
 function handleScroll() {
@@ -55,7 +52,6 @@ function handleScroll() {
         bubbleHolder.classList.remove('hovered');
     }
     if (rectMyName.top < window.innerHeight && rectMyName.bottom > 0) {
-        console.log('visible')
         // Element is visible, add a class for styling (e.g., 'hovered')
         myName.classList.add('text-active');
         introParagraph.classList.add('text-active');
@@ -72,10 +68,6 @@ function handleScroll() {
         faroukPhoto.classList.remove('photo-active');
     }
 }
-
-
-
-const mediaQuery = window.matchMedia('(max-width: 991px)');
 
 experiences[0].classList.add('explode-animation')
 
@@ -174,11 +166,10 @@ function carClickRight() {
 certifLeftArrows.forEach((element) => element.addEventListener('click', () => {
     certificates[certificatesIndex].classList.remove('active-certificate');
     certificatesIndex--;
-    if (certificatesIndex == -1) {
+    if (certificatesIndex === -1) {
         certificatesIndex = 7;
     }
     certificates[certificatesIndex].classList.add('active-certificate');
-    console.log(certificatesIndex)
 
 }))
 certifRightArrows.forEach((element) => element.addEventListener('click', () => {
@@ -188,8 +179,6 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
         certificatesIndex = 0;
     }
     certificates[certificatesIndex].classList.add('active-certificate');
-    console.log(certificatesIndex)
-
 }))
 
 form.addEventListener('submit', async (e) => {

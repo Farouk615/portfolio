@@ -209,7 +209,7 @@ header h1 {
 }
 
 .light-mode-box-shadow {
-  box-shadow: 0px -8px 26.2px 0px #B336FF;
+  box-shadow: 0 -8px 26.2px 0 #B336FF;
 }
 
 .top-header {
@@ -220,6 +220,17 @@ header h1 {
   position: absolute;
   top: 100%;
   left: 30%;
+}
+.bulb .click {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+.bulb #bulb-light-mode {
+  width: 100%;
+}
+.bulb #bulb-dark-mode {
+  width: 100%;
 }
 
 #welcome-text {

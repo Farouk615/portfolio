@@ -25,4 +25,15 @@ header h1 {
   position: absolute;
   top: 100%;
   left: 30%;
+  .click{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+  }
+  #bulb-light-mode{
+    width: 100%;
+  }
+  #bulb-dark-mode{
+    width: 100%;
+  }
 }
