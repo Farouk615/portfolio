@@ -15,6 +15,7 @@ let flags = document.querySelectorAll('.flag')
 let emailForm = document.querySelector('.email-form ')
 let sidebarButtons = document.querySelectorAll('.sidebar-button')
 let sidebar = document.querySelector('#sidebar')
+let sidebarButton = document.querySelector('#sidebar-button')
 let sidebarIcon = document.querySelector('#sidebar-header i')
 let sidebarHeader = document.querySelector('#sidebar-header')
 let certifLeftArrows = document.querySelectorAll('.arrow-left')
@@ -182,7 +183,6 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 }))
 
 form.addEventListener('submit', async (e) => {
-    console.log('hkgk')
     overlay.classList.remove('hide')
     e.preventDefault();
     const fname = document.getElementById('first-name').value;
@@ -217,3 +217,17 @@ sidebarButtons.forEach((element)=>{
         sidebar.classList.toggle('left-change')
     })
 })
+
+document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !sidebarButton.contains(event.target)) {
+        if(sidebar.classList.contains('left-change'))
+        sidebar.classList.remove('left-change');
+    }
+    if(!popup.contains(event.target)){
+        if(!overlay.classList.contains('hide') && !popup.classList.contains('hide')){
+            overlay.classList.add('hide')
+            popup.classList.add('hide')
+            loader.classList.remove('hide')
+        }
+    }
+});
