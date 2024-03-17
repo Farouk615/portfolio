@@ -215,11 +215,12 @@ header h1 {
 }
 
 .light-mode-box-shadow {
-  box-shadow: 0px -8px 26.2px 0px #B336FF;
+  box-shadow: 0 -8px 26.2px 0 #B336FF !important;
 }
 
 .top-header {
   position: relative;
+  box-shadow: 0 -8px 26.2px 3px #fff;
 }
 
 .bulb {
