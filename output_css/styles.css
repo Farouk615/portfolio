@@ -184,6 +184,12 @@
     right: 10% !important;
   }
 }
+@media screen and (min-width: 768px) {
+  .submit-button {
+    width: 35% !important;
+    margin: auto;
+  }
+}
 header {
   padding: 14px;
 }
@@ -209,7 +215,7 @@ header h1 {
 }
 
 .light-mode-box-shadow {
-  box-shadow: 0 -8px 26.2px 0 #B336FF;
+  box-shadow: 0px -8px 26.2px 0px #B336FF;
 }
 
 .top-header {

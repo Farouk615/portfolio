@@ -77,3 +77,9 @@
     right: 10% !important;
   }
 }
+@media screen and (min-width: 768px){
+  .submit-button{
+    width: 35% !important;
+    margin: auto;
+  }
+}
