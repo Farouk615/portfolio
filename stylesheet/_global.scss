@@ -72,6 +72,9 @@ $purple: #B336FF;
 .hide {
   display: none;
 }
+.reveal{
+  display: block !important;
+}
 
 #overlay {
   @include overlay()

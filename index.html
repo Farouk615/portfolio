@@ -282,17 +282,20 @@
                     <div class="form-group">
                         <label for="first-name">First Name</label>
                         <input type="text" name="first-name" id="first-name">
+                        <p class="validation" id="fname-valid">The first name is required</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                     <div class="form-group">
                         <label for="last-name">Last Name</label>
                         <input type="text" name="last-name" id="last-name">
+                        <p class="validation" id="lname-valid">The last name is required</p>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea class="form-control" id="message" name="message" rows="5"
-                                  placeholder="Enter your message" required></textarea>
+                                  placeholder="Enter your message"></textarea>
+                        <p class="validation" id="body-valid">The body message is required</p>
                     </div>
                 </div>
                 <button type="submit" class="submit-button">Send</button>

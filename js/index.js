@@ -35,6 +35,12 @@ let myName = document.querySelector('#my-name')
 let introParagraph = document.querySelector('#intro-section p')
 let faroukPhoto = document.querySelector('#photo-section img:first-child')
 
+// validation elements
+let firstNameValidation = document.querySelector('#fname-valid')
+let lastNameValidation = document.querySelector('#lname-valid')
+let bodyValidation = document.querySelector('#body-valid')
+
+
 window.addEventListener('scroll', handleScroll);
 
 function handleScroll() {
@@ -43,7 +49,7 @@ function handleScroll() {
     const rectPhoto = faroukPhoto.getBoundingClientRect();
     if (rectBubbleHolder.top < window.innerHeight && rectBubbleHolder.bottom > 0) {
         bubbleHolder.classList.add('hovered');
-    } else{
+    } else {
         bubbleHolder.classList.remove('hovered');
     }
     if (rectMyName.top < window.innerHeight && rectMyName.bottom > 0) {
@@ -78,9 +84,9 @@ function toggleTheme() {
     headerElement.classList.toggle("purple-color")
     headerElementSideBar.classList.toggle("purple-color")
     sidebarHeader.classList.toggle('sidebar-header-light')
-    bubble.forEach((element)=>element.classList.toggle('bubble-light'))
+    bubble.forEach((element) => element.classList.toggle('bubble-light'))
     listElements.forEach((element) => element.classList.toggle("purple-color"))
-    sidebarHeaders.forEach((element)=>element.classList.toggle('header-white'))
+    sidebarHeaders.forEach((element) => element.classList.toggle('header-white'))
     sidebar.classList.toggle('sidebar-background-light')
     sidebarIcon.classList.toggle('icons-light')
     emailForm.classList.toggle('background-light')
@@ -168,48 +174,73 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 }))
 
 form.addEventListener('submit', async (e) => {
-    overlay.classList.remove('hide')
     e.preventDefault();
     const fname = document.getElementById('first-name').value;
     const lname = document.getElementById('last-name').value;
     const message = document.getElementById('message').value;
-    await fetch(`${process.env.URL}/send-email`, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({fname, lname, message}),
-    }).then((res) => {
-        popup.classList.remove('hide')
-        loader.classList.add('hide')
-    }).catch((error) => {
-        successBox.classList.add('hide')
-        failureBox.classList.remove('hide')
-        popup.classList.remove('hide')
-        loader.classList.add('hide')
-    })
+    console.log(fname)
+    let isValid=true;
+    if(fname===""){
+        firstNameValidation.classList.add('reveal')
+        isValid=false
+    }else{
+        firstNameValidation.classList.remove('reveal')
+    }
+    if(lname===""){
+        lastNameValidation.classList.add('reveal')
+        isValid=false
+    }else{
+        lastNameValidation.classList.remove('reveal')
+    }
+    if(message===""){
+        bodyValidation.classList.add('reveal')
+        isValid=false
+    }else{
+        bodyValidation.classList.remove('reveal')
+    }
+    if (isValid) {
+        firstNameValidation.classList.remove('reveal')
+        lastNameValidation.classList.remove('reveal')
+        bodyValidation.classList.remove('reveal')
+        overlay.classList.remove('hide')
+        await fetch(`${process.env.URL}/send-email`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({fname, lname, message}),
+        }).then((res) => {
+            popup.classList.remove('hide')
+            loader.classList.add('hide')
+        }).catch((error) => {
+            successBox.classList.add('hide')
+            failureBox.classList.remove('hide')
+            popup.classList.remove('hide')
+            loader.classList.add('hide')
+        })
+    }
 })
 
-okButton.addEventListener('click',()=>{
+okButton.addEventListener('click', () => {
     overlay.classList.add('hide')
     loader.classList.remove('hide')
     popup.classList.add('hide')
-    if(successBox.classList.contains('hide')){
+    if (successBox.classList.contains('hide')) {
         successBox.classList.remove('hide')
         failureBox.classList.add('hide')
     }
 })
-sidebarButtons.forEach((element)=>{
-    element.addEventListener('click',()=>{
+sidebarButtons.forEach((element) => {
+    element.addEventListener('click', () => {
         sidebar.classList.toggle('left-change')
     })
 })
 
 document.addEventListener('click', (event) => {
     if (!sidebar.contains(event.target) && !sidebarButton.contains(event.target)) {
-        if(sidebar.classList.contains('left-change'))
-        sidebar.classList.remove('left-change');
+        if (sidebar.classList.contains('left-change'))
+            sidebar.classList.remove('left-change');
     }
-    if(!popup.contains(event.target)){
-        if(!overlay.classList.contains('hide') && !popup.classList.contains('hide')){
+    if (!popup.contains(event.target)) {
+        if (!overlay.classList.contains('hide') && !popup.classList.contains('hide')) {
             overlay.classList.add('hide')
             popup.classList.add('hide')
             loader.classList.remove('hide')

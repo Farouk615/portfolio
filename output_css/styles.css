@@ -63,6 +63,10 @@
   display: none;
 }
 
+.reveal {
+  display: block !important;
+}
+
 #overlay {
   position: fixed;
   width: 100%;
@@ -792,6 +796,11 @@ main {
 
 .box-shadow-light {
   box-shadow: 0 0 6px 7px rgba(0, 0, 0, 0.36);
+}
+
+.validation {
+  color: red;
+  display: none;
 }
 
 #sidebar {
