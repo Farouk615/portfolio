@@ -40,6 +40,38 @@ let firstNameValidation = document.querySelector('#fname-valid')
 let lastNameValidation = document.querySelector('#lname-valid')
 let bodyValidation = document.querySelector('#body-valid')
 
+let fname = document.getElementById('first-name');
+let lname = document.getElementById('last-name');
+let message = document.getElementById('message');
+
+fname.addEventListener('input', () => {
+    if (fname.value === '') {
+        firstNameValidation.classList.add('reveal')
+        fname.classList.add('validation-border-bottom')
+    } else {
+        firstNameValidation.classList.remove('reveal')
+        fname.classList.remove('validation-border-bottom')
+    }
+})
+lname.addEventListener('input', () => {
+    if (lname.value === '') {
+        lastNameValidation.classList.add('reveal')
+        lname.classList.add('validation-border-bottom')
+    } else {
+        lastNameValidation.classList.remove('reveal')
+        lname.classList.remove('validation-border-bottom')
+    }
+})
+message.addEventListener('input', () => {
+    if (message.value === '') {
+        bodyValidation.classList.add('reveal')
+        message.classList.add('validation-border')
+    } else {
+        bodyValidation.classList.remove('reveal')
+        message.classList.remove('validation-border')
+    }
+})
+
 
 window.addEventListener('scroll', handleScroll);
 
@@ -175,34 +207,32 @@ certifRightArrows.forEach((element) => element.addEventListener('click', () => {
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const fname = document.getElementById('first-name').value;
-    const lname = document.getElementById('last-name').value;
-    const message = document.getElementById('message').value;
-    console.log(fname)
-    let isValid=true;
-    if(fname===""){
-        firstNameValidation.classList.add('reveal')
-        isValid=false
-    }else{
-        firstNameValidation.classList.remove('reveal')
+    if (!fname.value) {
+        if (!firstNameValidation.classList.contains('reveal')) {
+            fname.classList.add('validation-border-bottom')
+            firstNameValidation.classList.add('reveal')
+        }
     }
-    if(lname===""){
-        lastNameValidation.classList.add('reveal')
-        isValid=false
-    }else{
-        lastNameValidation.classList.remove('reveal')
+    if (!lname.value) {
+        if (!lastNameValidation.classList.contains('reveal')) {
+            lname.classList.add('validation-border-bottom')
+            lastNameValidation.classList.add('reveal')
+        }
     }
-    if(message===""){
-        bodyValidation.classList.add('reveal')
-        isValid=false
-    }else{
-        bodyValidation.classList.remove('reveal')
+    if (!message.value) {
+        if (!bodyValidation.classList.contains('reveal')) {
+            message.classList.add('validation-border')
+            bodyValidation.classList.add('reveal')
+        }
     }
-    if (isValid) {
+    if (fname.value !== '' && lname.value !== '' && message.value !== '') {
         firstNameValidation.classList.remove('reveal')
         lastNameValidation.classList.remove('reveal')
         bodyValidation.classList.remove('reveal')
         overlay.classList.remove('hide')
+        const fname = document.getElementById('first-name').value;
+        const lname = document.getElementById('last-name').value;
+        const message = document.getElementById('message').value;
         await fetch(`${process.env.URL}/send-email`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},

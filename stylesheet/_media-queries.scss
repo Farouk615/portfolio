@@ -17,10 +17,10 @@
       width: 70% !important;
     }
   }
-  .bubble-holder{
+  .bubble-holder {
     margin-bottom: 50px;
   }
-  #popup-after-send{
+  #popup-after-send {
     width: unset;
   }
   #intro-section {
@@ -34,7 +34,7 @@
   #social-section {
     width: 80% !important;
   }
-  #photo-holder{
+  #photo-holder {
     margin: auto;
   }
   .bulb {
@@ -55,30 +55,42 @@
       width: 100% !important;
     }
   }
-  .top-corner{
+  .top-corner {
     top: -6% !important;
     left: -14% !important;
     width: 25% !important;
   }
-  .bottom-corner{
+  .bottom-corner {
     bottom: -6% !important;
     right: -14% !important;
     width: 25% !important;
   }
 }
-@media screen and (max-width: 500px){
-  .email-form{
+
+@media screen and (max-width: 500px) {
+  .email-form {
     padding: 1rem !important;
   }
-  .arrow-left{
+  .arrow-left {
     left: 10% !important;
   }
-  .arrow-right{
+  .arrow-right {
     right: 10% !important;
   }
+  #qualifications {
+    margin-top: 6rem;
+  }
+  .loader {
+    width: 50px;
+    height: 50px;
+  }
+  .arrow-down-box {
+    margin-top: 0;
+  }
 }
-@media screen and (min-width: 768px){
-  .submit-button{
+
+@media screen and (min-width: 768px) {
+  .submit-button {
     width: 35% !important;
     margin: auto;
   }
