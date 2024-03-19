@@ -34,6 +34,8 @@ let bubble = document.querySelectorAll('.bubble-holder .bubble')
 let myName = document.querySelector('#my-name')
 let introParagraph = document.querySelector('#intro-section p')
 let faroukPhoto = document.querySelector('#photo-section img:first-child')
+let footer = document.querySelector('footer')
+
 
 // validation elements
 let firstNameValidation = document.querySelector('#fname-valid')
@@ -123,6 +125,7 @@ function toggleTheme() {
     sidebarIcon.classList.toggle('icons-light')
     emailForm.classList.toggle('background-light')
     emailForm.classList.toggle('box-shadow-light')
+    footer.classList.toggle('footer-light')
 }
 
 function showText(target, message, index, interval) {
