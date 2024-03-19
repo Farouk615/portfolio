@@ -194,7 +194,7 @@ certifLeftArrows.forEach((element) => element.addEventListener('click', () => {
     certificates[certificatesIndex].classList.remove('active-certificate');
     certificatesIndex--;
     if (certificatesIndex === -1) {
-        certificatesIndex = 7;
+        certificatesIndex = certificates.length-1;
     }
     certificates[certificatesIndex].classList.add('active-certificate');
 
@@ -202,7 +202,7 @@ certifLeftArrows.forEach((element) => element.addEventListener('click', () => {
 certifRightArrows.forEach((element) => element.addEventListener('click', () => {
     certificates[certificatesIndex].classList.remove('active-certificate');
     certificatesIndex++;
-    if (certificatesIndex === 8) {
+    if (certificatesIndex === certificates.length) {
         certificatesIndex = 0;
     }
     certificates[certificatesIndex].classList.add('active-certificate');
