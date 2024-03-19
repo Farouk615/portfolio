@@ -8,6 +8,11 @@
   z-index: 3;
   transition: left ease-in-out 1s;
   background-color: #1e1e2d;
+
+  nav {
+    margin-top: 50px;
+  }
+
   ul {
     list-style-type: none;
     padding-left: 1rem;
@@ -50,7 +55,7 @@
 
   #sidebar-header {
     //background-color: #f5f6f9;
-     div {
+    div {
       width: 70%;
       margin-left: auto;
       display: flex;
@@ -71,20 +76,24 @@
 
   }
 }
-.left-change{
+
+.left-change {
   left: 0 !important;
 }
 
-.sidebar-header-light{
+.sidebar-header-light {
   background-color: #f5f6f9;
 }
-.icons-light{
+
+.icons-light {
   color: $black !important;
 }
-.header-white{
+
+.header-white {
   color: $black !important;
 }
-.sidebar-background-light{
+
+.sidebar-background-light {
   background-color: $white !important;
 }
 

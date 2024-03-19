@@ -254,12 +254,12 @@ header h1 {
 }
 
 .light-mode-box-shadow {
-  box-shadow: 0 -8px 26.2px 0px #B336FF !important;
+  box-shadow: 0 -8px 26.2px 0 #B336FF !important;
 }
 
 .top-header {
   position: relative;
-  box-shadow: 0px -8px 26.2px 3px #fff;
+  box-shadow: 0 -8px 26.2px 3px #fff;
 }
 
 .bulb {
@@ -860,6 +860,9 @@ main {
   z-index: 3;
   transition: left ease-in-out 1s;
   background-color: #1e1e2d;
+}
+#sidebar nav {
+  margin-top: 50px;
 }
 #sidebar ul {
   list-style-type: none;
