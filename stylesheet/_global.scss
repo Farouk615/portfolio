@@ -130,4 +130,8 @@ $purple: #B336FF;
 .validation-border-bottom{
   border-bottom: 1px solid #FF0000FF !important;
 }
-
+.header{
+  @include text-style(40px, "Caveat");
+  text-align: center;
+  margin-bottom: 95px;
+}

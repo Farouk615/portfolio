@@ -124,6 +124,16 @@
   border-bottom: 1px solid red !important;
 }
 
+.header {
+  font-family: "Caveat", serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 95px;
+}
+
 @media screen and (min-width: 768px) and (max-width: 995px) {
   .text-style {
     font-size: 20px !important;
@@ -150,6 +160,10 @@
     text-align: center;
     margin-top: 30px;
     align-items: center !important;
+  }
+  .my-certificates-text {
+    top: -45% !important;
+    left: 0 !important;
   }
 }
 @media screen and (max-width: 500px) {
@@ -190,10 +204,10 @@
     padding: 1rem !important;
   }
   .arrow-left {
-    left: 10% !important;
+    left: 7% !important;
   }
   .arrow-right {
-    right: 10% !important;
+    right: 7% !important;
   }
   #qualifications {
     margin-top: 6rem;
@@ -201,9 +215,6 @@
   .loader {
     width: 50px;
     height: 50px;
-  }
-  .arrow-down-box {
-    margin-top: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -237,12 +248,12 @@ header h1 {
 }
 
 .light-mode-box-shadow {
-  box-shadow: 0 -8px 26.2px 0 #B336FF !important;
+  box-shadow: 0 -8px 26.2px 0px #B336FF !important;
 }
 
 .top-header {
   position: relative;
-  box-shadow: 0 -8px 26.2px 3px #fff;
+  box-shadow: 0px -8px 26.2px 3px #fff;
 }
 
 .bulb {
@@ -313,6 +324,13 @@ main {
 #links {
   display: flex;
   gap: 10px;
+  color: inherit;
+}
+#links a {
+  color: inherit;
+}
+#links a i {
+  font-size: 25px;
 }
 
 #resume {
@@ -668,6 +686,12 @@ main {
   opacity: 1;
   transform: translate(-50%, 0) scale(1);
   z-index: 1;
+}
+
+.my-certificates-text {
+  position: absolute;
+  top: -40%;
+  left: -20%;
 }
 
 #experience {
